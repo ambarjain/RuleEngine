@@ -73,12 +73,12 @@ namespace BusinessRulesEngine
                 }
                 else if (selection == 2)
                 {
-                    Console.WriteLine("Upgraded a membership");
+                    Console.WriteLine("Purchase made for upgrading a membership");
                     Product membershipUpgrade = new Membership("upgrade");
-                    Product membership = new Membership("new");
-                    payments.Add(new ActivateMembershipRule());
+                   
+                    payments.Add(new UpgradeMembershipRule());
                     order = new OrderProcessor(payments);
-                    order.ProcessOrder(membership);
+                    order.ProcessOrder(membershipUpgrade);
                     //Console.WriteLine(membershipUpgrade.ProcessOrder() + "\n");
                 }
             }

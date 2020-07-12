@@ -1,10 +1,10 @@
 ﻿namespace BusinessRulesEngine
 {
-    internal class FreeFirstAidVideoRule : IPurchaseRule
+    internal class UpgradeMembershipRule : IPurchaseRule
     {
         public string ExecutePaymentRule(Product product)
         {
-            return "Adding free \'First Aid\' Video with Packing Slip";
+            return "Upgrading Membership";
         }
     }
 }
